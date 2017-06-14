@@ -37,7 +37,7 @@ func errnoErr(e syscall.Errno) error {
 }
 
 var (
-	mododbc32 = windows.NewLazySystemDLL("odbc32.dll")
+	mododbc32 = windows.NewLazySystemDLL("dmapi54.dll")
 
 	procSQLAllocHandle     = mododbc32.NewProc("SQLAllocHandle")
 	procSQLBindCol         = mododbc32.NewProc("SQLBindCol")
